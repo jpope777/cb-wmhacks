@@ -1,0 +1,11 @@
+cb-wmhacks (0.02) unstable; urgency=low
+
+  * Add slight delay to hotcorner detection.
+
+ -- Philip Newborough <corenominal@corenominal.org>  Wed, 25 Apr 2012 07:54:03 +0100
+
+cb-wmhacks (0.01) unstable; urgency=low
+
+  * Initial release.
+
+ -- Philip Newborough <corenominal@corenominal.org>  Mon, 23 Apr 2012 09:19:16 +0100

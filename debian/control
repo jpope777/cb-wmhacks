@@ -1,0 +1,17 @@
+Source: cb-wmhacks
+Section: misc
+Priority: extra
+Maintainer: Philip Newborough <corenominal@corenominal.org>
+Build-Depends: debhelper (>= 5.0.0)
+Standards-Version: 3.9.1
+Homepage: http://crunchbang.org/
+
+Package: cb-wmhacks
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, wmctrl, python, python-xlib
+Recommends: kupfer
+Description: CrunchBang window manager hacks.
+ A script for adding hot corners and aero style window snapping
+ to Openbox. Written for CrunchBang Linux <http://crunchbang.org/>
+ by Philip Newborough <corenominal@corenominal.org>
+ .
