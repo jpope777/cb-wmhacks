@@ -29,7 +29,7 @@ Command line usage:
 
 On Debian systems:
 
-    sudo apt-get install python python-xlib wmctr
+    sudo apt-get install python python-xlib wmctrl
 
 ### Credits
 
