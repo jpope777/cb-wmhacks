@@ -21,6 +21,16 @@ Command line usage:
         --aero-left     attempt to snap active window to left of screen
         --aero-right    attempt to snap active window to right of screen
 
+### Dependencies
+
+* python
+* python-xlib
+* wmctrl
+
+On Debian systems:
+
+    sudo apt-get install python python-xlib wmctr
+
 ### Credits
 
 The script is a hack of an existing script found on the Gentoo Wiki: 
