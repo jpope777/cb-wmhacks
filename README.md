@@ -26,10 +26,11 @@ Command line usage:
 * python
 * python-xlib
 * wmctrl
+* xdotool (>=2.20110530)
 
-On Debian systems:
+On CrunchBang systems:
 
-    sudo apt-get install python python-xlib wmctrl
+    sudo apt-get update && sudo apt-get install python python-xlib wmctrl xdotool
 
 ### Credits
 
