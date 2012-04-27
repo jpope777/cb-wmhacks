@@ -1,3 +1,10 @@
+cb-wmhacks (0.04) unstable; urgency=low
+
+  * Fix horizontal place.
+  * Replace kupfer with gmrun.
+
+ -- Philip Newborough <corenominal@corenominal.org>  Fri, 27 Apr 2012 08:15:17 +0100
+
 cb-wmhacks (0.03) unstable; urgency=low
 
   * Add session management for aero snapping.

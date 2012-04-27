@@ -9,7 +9,7 @@ Homepage: http://crunchbang.org/
 Package: cb-wmhacks
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, wmctrl, python, python-xlib, xdotool (>=1:2.20110530.1-3)
-Recommends: kupfer
+Recommends: gmrun
 Description: CrunchBang window manager hacks.
  A script for adding hot corners and aero style window snapping
  to Openbox. Written for CrunchBang Linux <http://crunchbang.org/>

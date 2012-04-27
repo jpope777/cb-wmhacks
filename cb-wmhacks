@@ -82,7 +82,7 @@ def window_geometry(ID):
 	Size = re.search(r'\d+x\d+', p[0])
 	if Pos and Size:
 		Pos = Pos.group().split(',')
-		Size = Size.group().split('x')	
+		Size = Size.group().split('x')
 		return Pos[0]+'|'+Pos[1]+'|'+Size[0]+'|'+Size[1]
 
 def window_store():
@@ -97,13 +97,15 @@ def window_restore(D,width):
 	ID = window_id()
 	G = windows[ID].split('|')
 	command = 'wmctrl -r :ACTIVE: -b remove,maximized_vert && '
+	#FIXME: adjust horizontal placement, not sure where this discrepancy comes from?
+	AdjustT = int(G[1]) - 40
 	if D == "L":
-		command += 'wmctrl -r :ACTIVE: -e 0,10,'+G[1]+','+G[2]+','+G[3]
+		command += 'wmctrl -r :ACTIVE: -e 0,10,'+str(AdjustT)+','+G[2]+','+G[3]
 	elif D == "R":
 		AdjustR = int(width) - int(G[2]) - 10
-		command += 'wmctrl -r :ACTIVE: -e 0,'+str(AdjustR)+','+G[1]+','+G[2]+','+G[3]
+		command += 'wmctrl -r :ACTIVE: -e 0,'+str(AdjustR)+','+str(AdjustT)+','+G[2]+','+G[3]
 	else:
-		command += 'wmctrl -r :ACTIVE: -e 0,'+G[0]+','+G[1]+','+G[2]+','+G[3]
+		command += 'wmctrl -r :ACTIVE: -e 0,'+G[0]+','+str(AdjustT)+','+G[2]+','+G[3]
 	del windows[ID]
 	if len(windows) == 0:
 		o = ''
@@ -174,7 +176,7 @@ elif sys.argv[1] == "--daemon":
 			os.makedirs(cfgdir)
 		cfgfile = open(rcfile,'w')
 		Config.add_section('Hot Corners')
-		Config.set('Hot Corners','top_left_corner_command', 'kupfer')
+		Config.set('Hot Corners','top_left_corner_command', 'gmrun')
 		Config.set('Hot Corners','top_right_corner_command', '')
 		Config.set('Hot Corners','bottom_left_corner_command', '')
 		Config.set('Hot Corners','bottom_right_corner_command', '')
