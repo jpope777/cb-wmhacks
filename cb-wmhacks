@@ -67,7 +67,10 @@ def window_id():
 	p = Popen(['xdotool', 'getactivewindow'], stdout=PIPE)
 	ID = p.communicate()
 	ID = int(ID[0])
-	return str(ID)
+	p = Popen(['xdotool', 'getwindowpid', str(ID)], stdout=PIPE)
+	PID = p.communicate()
+	PID = int(PID[0])
+	return str(ID)+'-'+str(PID)
 
 def window_lookup():
 	ID = window_id()
@@ -76,7 +79,8 @@ def window_lookup():
 		return True
 
 def window_geometry(ID):
-	p = Popen(['xdotool', 'getwindowgeometry', ID], stdout=PIPE)
+	ID = ID.split('-')
+	p = Popen(['xdotool', 'getwindowgeometry', ID[0]], stdout=PIPE)
 	p = p.communicate()
 	Pos = re.search(r'\d+,\d+', p[0])
 	Size = re.search(r'\d+x\d+', p[0])
