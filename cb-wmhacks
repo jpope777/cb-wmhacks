@@ -226,41 +226,41 @@ elif sys.argv[1] == "--daemon":
 							mousemove(pos[0] - bounce, pos[1])
 
 		
-		elif pos[0] == 0 and pos[1] == 0 and pos[2] == 0:	
+		elif pos[0] == 0 and pos[1] == 0:	
 			if Config.get('Hot Corners','top_left_corner_command') != '':
 				time.sleep(0.2)
 				pos = mousepos()
-				if pos[0] == 0 and pos[1] == 0 and pos[2] == 0:
+				if pos[0] == 0 and pos[1] == 0:
 					mousemove(pos[0] + bounce, pos[1] + bounce)
 					os.system('(' + Config.get('Hot Corners','top_left_corner_command') + ') &')
 					mousemove(pos[0] + bounce, pos[1] + bounce)
 					time.sleep(2)
 		
-		elif pos[0] == rt and pos[1] == 0 and pos[2] == 0:
+		elif pos[0] == rt and pos[1] == 0:
 			if Config.get('Hot Corners','top_right_corner_command') != '':
 				time.sleep(0.2)
 				pos = mousepos()
-				if pos[0] == rt and pos[1] == 0 and pos[2] == 0:
+				if pos[0] == rt and pos[1] == 0 :
 					mousemove(pos[0] - bounce, pos[1] + bounce)
 					os.system('(' + Config.get('Hot Corners','top_right_corner_command') + ') &')
 					mousemove(pos[0] - bounce, pos[1] + bounce)
 					time.sleep(2)
 
-		elif pos[0] == 0 and pos[1] == bt and pos[2] == 0:
+		elif pos[0] == 0 and pos[1] == bt:
 			if Config.get('Hot Corners','bottom_left_corner_command') != '':
 				time.sleep(0.2)
 				pos = mousepos()
-				if pos[0] == 0 and pos[1] == bt and pos[2] == 0:
+				if pos[0] == 0 and pos[1] == bt:
 					mousemove(pos[0] + bounce, pos[1] - bounce)
 					os.system('(' + Config.get('Hot Corners','bottom_left_corner_command') + ') &')
 					mousemove(pos[0] + bounce, pos[1] - bounce)
 					time.sleep(2)
 
-		elif pos[0] == rt and pos[1] == bt and pos[2] == 0:
+		elif pos[0] == rt and pos[1] == bt:
 			if Config.get('Hot Corners','bottom_right_corner_command') != '':
 				time.sleep(0.2)
 				pos = mousepos()
-				if pos[0] == rt and pos[1] == bt and pos[2] == 0:
+				if pos[0] == rt and pos[1] == bt:
 					mousemove(pos[0] - bounce, pos[1] - bounce)
 					os.system('(' + Config.get('Hot Corners','bottom_right_corner_command') + ') &')
 					mousemove(pos[0] - bounce, pos[1] - bounce)
