@@ -1,3 +1,10 @@
+cb-wmhacks (0.06) unstable; urgency=low
+
+  * Remove edge detection snapping, too buggy.
+  * Split into two seperate scripts.
+
+ -- Philip Newborough <corenominal@corenominal.org>  Mon, 30 Apr 2012 11:34:08 +0100
+
 cb-wmhacks (0.05) unstable; urgency=low
 
   * Add PID to ID to increase uniqueness.

@@ -12,7 +12,8 @@ clean:
 	dh_clean
 
 install:
-	dh_install cb-wmhacks /usr/bin
+	dh_install cb-hotcorners /usr/bin
+	dh_install cb-aerosnap /usr/bin
 	dh_testdir
 	dh_testroot
 
